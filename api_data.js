@@ -167,6 +167,7 @@ define({ "api": [
     "title": "Adicionar Dispositivo",
     "version": "1.0.0",
     "name": "adicionar_Dispositivo_2",
+    "description": "<p>userAuthKey: 'NmFkNzI1MzAtOTI2MS00MzQ4LWExZDQtZjk5NWZkOWQwMjY5' appAuthKey: 'NDRlNjYwNjItMjI0OC00YjZiLTkzMWEtMWI5MTc0M2FhNTY1' appId: 'bb416d8c-898b-4152-b863-01a7e233b7e7'</p>",
     "group": "Dispositivo",
     "parameter": {
       "fields": {
