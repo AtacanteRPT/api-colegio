@@ -35,7 +35,7 @@
     "url": "/asistencia/historial_por_tutor",
     "title": "Historial de Asistencias alumnos por tutor",
     "version": "1.0.0",
-    "name": "getCursos",
+    "name": "get_historial_por_tutor",
     "group": "Asistencia",
     "description": "<p>Exemplo logueado (/persona/1816).</p>",
     "success": {
