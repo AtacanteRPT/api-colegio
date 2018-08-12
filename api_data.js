@@ -1,12 +1,12 @@
 define({ "api": [
   {
     "type": "get",
-    "url": "/asistencia/historial",
+    "url": "/asistencia/historial_alumno",
     "title": "Historial de Asistencias alumno/s",
     "version": "1.0.0",
     "name": "getCursos",
     "group": "Asistencia",
-    "description": "<p>necesita esta Logueado como Tutor o como alumno.</p>",
+    "description": "<p>necesita esta Logueado como  alumno. (ejemplo usuario /persona/23)</p>",
     "success": {
       "fields": {
         "Success 200": [
@@ -32,7 +32,38 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/curso/mostrar_turno/:id",
+    "url": "/asistencia/historial_por_tutor",
+    "title": "Historial de Asistencias alumnos por tutor",
+    "version": "1.0.0",
+    "name": "getCursos",
+    "group": "Asistencia",
+    "description": "<p>Exemplo logueado (/persona/1816).</p>",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "json",
+            "optional": false,
+            "field": "todos",
+            "description": "<p>los Cursos anidados</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success response:",
+          "content": "   {\n  \"nombre\": \"José\",\n  \"paterno\": \"Luis\",\n  \"materno\": \"Menchaca Jalakori\",\n  \"alumnos\": [\n      {\n          \"id\": 23,\n          \"email\": null,\n          \"dispositivo\": null,\n          \"identificacion\": \"23-MRJ\",\n          \"nombre\": \"José Gabriel\",\n          \"img\": null,\n          \"paterno\": \"Menchaca\",\n          \"materno\": \"Rivero\",\n          \"telefono\": null,\n          \"celular\": null,\n          \"cedula\": null,\n          \"expedido\": null,\n          \"fechaNacimiento\": null,\n          \"fechaAlta\": null,\n          \"sexo\": null,\n          \"nro\": \"23\",\n          \"codigoFoto\": \"460\",\n          \"rol\": \"alumno\",\n          \"asistencias\": [\n              {\n                  \"createdAt\": null,\n                  \"updatedAt\": null,\n                  \"id\": 92,\n                  \"fecha\": \"2018-08-08T04:00:00.000Z\",\n                  \"estado\": null,\n                  \"observacion\": null,\n                  \"hora_llegada\": \"06:36:05\",\n                  \"hora_salida\": \"09:41:01\",\n                  \"idGestionAcademica\": 1,\n                  \"idPersona\": 23\n              },\n              {\n                  \"createdAt\": null,\n                  \"updatedAt\": null,\n                  \"id\": 1,\n                  \"fecha\": \"2018-08-09T04:00:00.000Z\",\n                  \"estado\": null,\n                  \"observacion\": null,\n                  \"hora_llegada\": \"10:41:44\",\n                  \"hora_salida\": \"00:30:34\",\n                  \"idGestionAcademica\": 1,\n                  \"idPersona\": 23\n              },\n              {\n                  \"createdAt\": null,\n                  \"updatedAt\": null,\n                  \"id\": 58,\n                  \"fecha\": \"2018-08-11T04:00:00.000Z\",\n                  \"estado\": null,\n                  \"observacion\": null,\n                  \"hora_llegada\": \"17:57:52\",\n                  \"hora_salida\": \"19:34:56\",\n                  \"idGestionAcademica\": 1,\n                  \"idPersona\": 23\n              },\n              {\n                  \"createdAt\": null,\n                  \"updatedAt\": null,\n                  \"id\": 69,\n                  \"fecha\": \"2018-08-21T04:00:00.000Z\",\n                  \"estado\": null,\n                  \"observacion\": null,\n                  \"hora_llegada\": \"10:16:49\",\n                  \"hora_salida\": \"22:44:41\",\n                  \"idGestionAcademica\": 1,\n                  \"idPersona\": 23\n              },\n              {\n                  \"createdAt\": null,\n                  \"updatedAt\": null,\n                  \"id\": 89,\n                  \"fecha\": \"2018-08-24T04:00:00.000Z\",\n                  \"estado\": null,\n                  \"observacion\": null,\n                  \"hora_llegada\": \"01:05:29\",\n                  \"hora_salida\": \"13:06:30\",\n                  \"idGestionAcademica\": 1,\n                  \"idPersona\": 23\n              },\n              {\n                  \"createdAt\": null,\n                  \"updatedAt\": null,\n                  \"id\": 96,\n                  \"fecha\": \"2018-08-30T04:00:00.000Z\",\n                  \"estado\": null,\n                  \"observacion\": null,\n                  \"hora_llegada\": \"09:04:57\",\n                  \"hora_salida\": \"11:57:42\",\n                  \"idGestionAcademica\": 1,\n                  \"idPersona\": 23\n              }\n          ]\n      },\n      {\n          \"id\": 306,\n          \"email\": null,\n          \"dispositivo\": null,\n          \"identificacion\": \"306-MRL\",\n          \"nombre\": \"Luuis Andrés\",\n          \"img\": null,\n          \"paterno\": \"Menchaca\",\n          \"materno\": \"Rivero\",\n          \"telefono\": null,\n          \"celular\": null,\n          \"cedula\": null,\n          \"expedido\": null,\n          \"fechaNacimiento\": null,\n          \"fechaAlta\": null,\n          \"sexo\": null,\n          \"nro\": \"20\",\n          \"codigoFoto\": \"1100\",\n          \"rol\": \"alumno\",\n          \"asistencias\": []\n      }\n  ]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "api/Asistencia.js",
+    "groupTitle": "Asistencia"
+  },
+  {
+    "type": "get",
+    "url": "/curso/mostrar_turno/:idTurno",
     "title": "get todos Ordenados",
     "version": "1.0.0",
     "name": "getCursos",
@@ -82,7 +113,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/curso/mostrar_turno/:idTurno",
+    "url": "/curso/mostrar_turno/:id",
     "title": "get todos Ordenados",
     "version": "1.0.0",
     "name": "getCursos",
