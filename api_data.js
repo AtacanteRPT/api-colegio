@@ -163,11 +163,11 @@ define({ "api": [
   },
   {
     "type": "POST",
-    "url": "/dispositivo",
+    "url": "/dispositivo/adicionar",
     "title": "Adicionar Dispositivo",
     "version": "1.0.0",
     "name": "adicionar_Dispositivo_2",
-    "description": "<p>userAuthKey: 'NmFkNzI1MzAtOTI2MS00MzQ4LWExZDQtZjk5NWZkOWQwMjY5' appAuthKey: 'NDRlNjYwNjItMjI0OC00YjZiLTkzMWEtMWI5MTc0M2FhNTY1' appId: 'bb416d8c-898b-4152-b863-01a7e233b7e7'</p>",
+    "description": "<p>persona logueada emeplo (/persona/1816)</p>",
     "group": "Dispositivo",
     "parameter": {
       "fields": {
@@ -192,7 +192,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Request-Example:",
-        "content": "{\n\t\"idPersona\":1,\n\t\"idDispositivo\":\"acc7ce55-1b0c-4542-91d8-39d86f52e52d\"\n }",
+        "content": "{\n\t\"idDispositivo\":\"acc7ce55-1b0c-4542-91d8-39d86f52e52d\"\n }",
         "type": "json"
       }
     ],
