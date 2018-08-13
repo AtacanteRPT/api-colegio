@@ -561,17 +561,11 @@ define({ "api": [
     "url": "/usuario/cambiarPassword",
     "title": "Cambiar Password usuario",
     "name": "cambiar_password",
+    "description": "<p>Debe estar logueado.</p>",
     "group": "Usuario",
     "parameter": {
       "fields": {
         "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "id",
-            "description": "<p>id persona</p>"
-          },
           {
             "group": "Parameter",
             "type": "String",
