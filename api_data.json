@@ -493,6 +493,63 @@
     "groupTitle": "Task"
   },
   {
+    "type": "get",
+    "url": "/persona?cedula=#",
+    "title": "Buscar por carnet",
+    "version": "1.0.0",
+    "name": "buscar_por_cedula",
+    "group": "Tutor",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "id",
+            "description": "<p>The task id</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "/persona?cedula=6811906",
+        "type": "js"
+      }
+    ],
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "_id",
+            "description": "<p>The task id</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "cedula",
+            "description": "<p>numero de cedula</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success response:",
+          "content": "[\n {\n     \"id\": 924,\n     \"email\": null,\n     \"dispositivo\": null,\n     \"identificacion\": \"6811906\",\n     \"nombre\": \"Delia\",\n     \"img\": null,\n     \"paterno\": \"Isabel\",\n     \"materno\": \"Ortiz Antelo\",\n     \"telefono\": null,\n     \"celular\": null,\n     \"cedula\": 6811906,\n     \"expedido\": null,\n     \"fechaNacimiento\": null,\n     \"fechaAlta\": null,\n     \"sexo\": null,\n     \"nro\": \"2\",\n     \"codigoFoto\": null,\n     \"rol\": \"tutor\"\n }\n ]",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "api/tutor.js",
+    "groupTitle": "Tutor"
+  },
+  {
     "type": "post",
     "url": "/usuario",
     "title": "Adicionar usuario admin",
@@ -591,7 +648,7 @@
             "type": "type",
             "optional": false,
             "field": "name",
-            "description": "<p>description</p>"
+            "description": "<p>description irc</p>"
           }
         ]
       },
